@@ -1,0 +1,17 @@
+{
+  "name": "chakravyga",
+  "version": "1.0.0",
+  "description": "Routing System",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "expresso test/*"
+  },
+  "author": "plasmashadow",
+  "license": "ISC",
+  "devDependencies": {
+    "expresso": "^0.9.2"
+  }
+}
