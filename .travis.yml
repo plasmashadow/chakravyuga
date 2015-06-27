@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+- '0.12'
+- '0.11'
+- '0.10'
+deploy:
+  provider: npm
+  email: plasmashadowx@gmail.com
+  api_key:
+    secure: EE9oV7QeVlSEEhvgRufIKiFF90DW8qXK+n05X2jlhdTkHy/LxO7Ck1lIdPuy7UQH+NJ3Zu3TKGtnss1xb9OaPgNNgyuT4ztaig+HpAVXc6z6vvZl2+rZlyluO/i5ltcEH+vkxe0/oNzNoHvKgJlvmQa7826KdwuF039pN9rlYv8=
+  on:
+    repo: plasmashadow/chakravyuga
+    branch: master

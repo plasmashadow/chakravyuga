@@ -1,0 +1,88 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'jquery-defered',
+1 verbose cli   '--save' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.39
+4 verbose node symlink /usr/bin/node
+5 warn package.json assert@1.3.0 assert is also the name of a node core module.
+6 verbose readDependencies using package.json deps
+7 verbose cache add [ 'jquery-defered', null ]
+8 verbose cache add name=undefined spec="jquery-defered" args=["jquery-defered",null]
+9 verbose parsed url { protocol: null,
+9 verbose parsed url   slashes: null,
+9 verbose parsed url   auth: null,
+9 verbose parsed url   host: null,
+9 verbose parsed url   port: null,
+9 verbose parsed url   hostname: null,
+9 verbose parsed url   hash: null,
+9 verbose parsed url   search: null,
+9 verbose parsed url   query: null,
+9 verbose parsed url   pathname: 'jquery-defered',
+9 verbose parsed url   path: 'jquery-defered',
+9 verbose parsed url   href: 'jquery-defered' }
+10 silly lockFile f3d5e6e8-jquery-defered jquery-defered
+11 verbose lock jquery-defered /home/plasmashadow/.npm/f3d5e6e8-jquery-defered.lock
+12 silly lockFile f3d5e6e8-jquery-defered jquery-defered
+13 silly lockFile f3d5e6e8-jquery-defered jquery-defered
+14 verbose addNamed [ 'jquery-defered', '' ]
+15 verbose addNamed [ null, '*' ]
+16 silly lockFile eee45b48-jquery-defered jquery-defered@
+17 verbose lock jquery-defered@ /home/plasmashadow/.npm/eee45b48-jquery-defered.lock
+18 silly addNameRange { name: 'jquery-defered', range: '*', hasData: false }
+19 verbose request where is /jquery-defered
+20 verbose request registry https://registry.npmjs.org/
+21 verbose request id 1c2b328e955fbd5d
+22 verbose url raw /jquery-defered
+23 verbose url resolving [ 'https://registry.npmjs.org/', './jquery-defered' ]
+24 verbose url resolved https://registry.npmjs.org/jquery-defered
+25 verbose request where is https://registry.npmjs.org/jquery-defered
+26 info trying registry request attempt 1 at 12:59:29
+27 http GET https://registry.npmjs.org/jquery-defered
+28 http 404 https://registry.npmjs.org/jquery-defered
+29 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+29 verbose headers   'content-type': 'application/json',
+29 verbose headers   'cache-control': 'max-age=0',
+29 verbose headers   'content-length': '51',
+29 verbose headers   'accept-ranges': 'bytes',
+29 verbose headers   date: 'Sat, 27 Jun 2015 07:29:31 GMT',
+29 verbose headers   via: '1.1 varnish',
+29 verbose headers   age: '0',
+29 verbose headers   connection: 'keep-alive',
+29 verbose headers   'x-served-by': 'cache-sin6920-SIN',
+29 verbose headers   'x-cache': 'MISS',
+29 verbose headers   'x-cache-hits': '0',
+29 verbose headers   'x-timer': 'S1435390170.889402,VS0,VE210' }
+30 silly registry.get cb [ 404,
+30 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+30 silly registry.get     'content-type': 'application/json',
+30 silly registry.get     'cache-control': 'max-age=0',
+30 silly registry.get     'content-length': '51',
+30 silly registry.get     'accept-ranges': 'bytes',
+30 silly registry.get     date: 'Sat, 27 Jun 2015 07:29:31 GMT',
+30 silly registry.get     via: '1.1 varnish',
+30 silly registry.get     age: '0',
+30 silly registry.get     connection: 'keep-alive',
+30 silly registry.get     'x-served-by': 'cache-sin6920-SIN',
+30 silly registry.get     'x-cache': 'MISS',
+30 silly registry.get     'x-cache-hits': '0',
+30 silly registry.get     'x-timer': 'S1435390170.889402,VS0,VE210' } ]
+31 silly lockFile eee45b48-jquery-defered jquery-defered@
+32 silly lockFile eee45b48-jquery-defered jquery-defered@
+33 error 404 404 Not Found: jquery-defered
+33 error 404
+33 error 404 'jquery-defered' is not in the npm registry.
+33 error 404 You should bug the author to publish it
+33 error 404 It was specified as a dependency of 'chakravyga'
+33 error 404
+33 error 404 Note that you can also install from a
+33 error 404 tarball, folder, or http url, or git url.
+34 error System Linux 3.13.0-55-generic
+35 error command "/usr/bin/node" "/usr/bin/npm" "install" "jquery-defered" "--save"
+36 error cwd /home/plasmashadow/github/chakravyga
+37 error node -v v0.10.39
+38 error npm -v 1.4.28
+39 error code E404
+40 verbose exit [ 1, true ]
