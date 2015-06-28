@@ -34,12 +34,12 @@
 18 silly addNameRange { name: 'jquery-defered', range: '*', hasData: false }
 19 verbose request where is /jquery-defered
 20 verbose request registry https://registry.npmjs.org/
-21 verbose request id 1c2b328e955fbd5d
+21 verbose request id c5eead81d173f5b7
 22 verbose url raw /jquery-defered
 23 verbose url resolving [ 'https://registry.npmjs.org/', './jquery-defered' ]
 24 verbose url resolved https://registry.npmjs.org/jquery-defered
 25 verbose request where is https://registry.npmjs.org/jquery-defered
-26 info trying registry request attempt 1 at 12:59:29
+26 info trying registry request attempt 1 at 07:46:07
 27 http GET https://registry.npmjs.org/jquery-defered
 28 http 404 https://registry.npmjs.org/jquery-defered
 29 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
@@ -47,28 +47,28 @@
 29 verbose headers   'cache-control': 'max-age=0',
 29 verbose headers   'content-length': '51',
 29 verbose headers   'accept-ranges': 'bytes',
-29 verbose headers   date: 'Sat, 27 Jun 2015 07:29:31 GMT',
+29 verbose headers   date: 'Sun, 28 Jun 2015 02:16:08 GMT',
 29 verbose headers   via: '1.1 varnish',
 29 verbose headers   age: '0',
 29 verbose headers   connection: 'keep-alive',
-29 verbose headers   'x-served-by': 'cache-sin6920-SIN',
+29 verbose headers   'x-served-by': 'cache-sin6921-SIN',
 29 verbose headers   'x-cache': 'MISS',
 29 verbose headers   'x-cache-hits': '0',
-29 verbose headers   'x-timer': 'S1435390170.889402,VS0,VE210' }
+29 verbose headers   'x-timer': 'S1435457768.236506,VS0,VE218' }
 30 silly registry.get cb [ 404,
 30 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
 30 silly registry.get     'content-type': 'application/json',
 30 silly registry.get     'cache-control': 'max-age=0',
 30 silly registry.get     'content-length': '51',
 30 silly registry.get     'accept-ranges': 'bytes',
-30 silly registry.get     date: 'Sat, 27 Jun 2015 07:29:31 GMT',
+30 silly registry.get     date: 'Sun, 28 Jun 2015 02:16:08 GMT',
 30 silly registry.get     via: '1.1 varnish',
 30 silly registry.get     age: '0',
 30 silly registry.get     connection: 'keep-alive',
-30 silly registry.get     'x-served-by': 'cache-sin6920-SIN',
+30 silly registry.get     'x-served-by': 'cache-sin6921-SIN',
 30 silly registry.get     'x-cache': 'MISS',
 30 silly registry.get     'x-cache-hits': '0',
-30 silly registry.get     'x-timer': 'S1435390170.889402,VS0,VE210' } ]
+30 silly registry.get     'x-timer': 'S1435457768.236506,VS0,VE218' } ]
 31 silly lockFile eee45b48-jquery-defered jquery-defered@
 32 silly lockFile eee45b48-jquery-defered jquery-defered@
 33 error 404 404 Not Found: jquery-defered

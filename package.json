@@ -1,6 +1,6 @@
 {
   "name": "chakravyga",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "description": "Routing System",
   "main": "index.js",
   "directories": {
@@ -20,6 +20,6 @@
     "mocha": "^2.2.5"
   },
   "dependencies": {
-    "heap": "^0.2.6"
+    "jquery-deferred": "^0.3.0"
   }
 }

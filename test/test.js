@@ -1,5 +1,5 @@
 var assert = require('assert');
-var charkra = require('../index.js');
+var chakra = require('../index.js');
 var taskobserver = require('../lib/Tashhash.js');
 var resobserver = require('../lib/Resourcehash.js');
 
@@ -20,4 +20,20 @@ describe('resouce observer suite', function(){
 		var value = resobserver.get("hello");
 		assert.ok(value[0].resource['hey'], 1);
 	})
-})
+});
+
+
+describe('router suite', function(){
+
+	it('should route', function(){
+		var ch = chakra;
+		ch.addResources("hi", [1,2,3]);
+		ch.addTasks("hi", [1,2,3,4,5]);
+		var req = ch.route('hi', function(resource, done){
+			console.log(resource);
+			done();
+		}, function(error){
+			console.log(error);
+		});
+	});
+});
