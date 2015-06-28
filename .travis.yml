@@ -9,5 +9,4 @@ deploy:
   api_key:
     secure: WIGTJhJmfJLXQgxs8XsDCnRvmppPChjDnWQ104NBCAlML6wiEcaPfo3O3U70lXcT/Lz8INCB9n9BIQTNoSZdxPgmrBQ4KZEmW78h9E6VLsnGQgYJTvMoh9O81dFD8EHySbRzJ41SebVtP/CpiSyHc+ou9YZrbXeAvwWiP6u8FZs=
   on:
-    repo: plasmashadow/chakravyuga
     branch: master
