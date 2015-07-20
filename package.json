@@ -1,6 +1,6 @@
 {
   "name": "chakravyga",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Routing System",
   "main": "index.js",
   "directories": {

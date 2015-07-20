@@ -1,39 +1,23 @@
 var assert = require('assert');
 var chakra = require('../index.js');
-var taskobserver = require('../lib/Tashhash.js');
-var resobserver = require('../lib/Resourcehash.js');
+var $ = require('jquery-deferred');
 
 
-describe('taskobserver suite', function(){
-
-	it('should add the task', function(){
-		taskobserver.addTask("hello", {'a': 1});
-		var value = taskobserver.get("hello");
-		assert.ok(value[0].task['a'], 1);
-	});
-});
-
-describe('resouce observer suite', function(){
-
-	it('should add observer', function(){
-		resobserver.addResource("hello", {"hey": 1});
-		var value = resobserver.get("hello");
-		assert.ok(value[0].resource['hey'], 1);
-	})
-});
-
-
-describe('router suite', function(){
-
-	it('should route', function(){
-		var ch = chakra;
-		ch.addResources("hi", [1,2,3]);
-		ch.addTasks("hi", [1,2,3,4,5]);
-		var req = ch.route('hi', function(resource, done){
-			console.log(resource);
-			done();
-		}, function(error){
-			console.log(error);
+describe('Endpoint Test Suite', function(){
+	 it('should add Task', function(){
+		 var ep = new chakra.Endpoint();
+		 var diff = $.Deferred();
+		 ep.onExecute(function(task){
+			console.log(task);
+		 });
+		ep.onEnd(function(tasks){
+			console.log(tasks);
+			diff.resolve(tasks);
+		});
+		 ep.AddTask({"find": "this"});
+		 ep.AddTask({"find": "that"});
+		diff.done(function(tasks){
+			assert.ok(true);
 		});
 	});
-});
+})

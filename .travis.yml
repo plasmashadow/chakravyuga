@@ -7,6 +7,7 @@ deploy:
   provider: npm
   email: plasmashadowx@gmail.com
   api_key:
-    secure: WIGTJhJmfJLXQgxs8XsDCnRvmppPChjDnWQ104NBCAlML6wiEcaPfo3O3U70lXcT/Lz8INCB9n9BIQTNoSZdxPgmrBQ4KZEmW78h9E6VLsnGQgYJTvMoh9O81dFD8EHySbRzJ41SebVtP/CpiSyHc+ou9YZrbXeAvwWiP6u8FZs=
+    secure: MSJ8OdGiqhrkyjUSsfODHkBoQ6ClJk6ZS0rfJ4knVzFMA5byHLg4vOTsLAAPiTB3np1+hh9n/ct6dLg4xtojH62h4i5vxRbLnCayv4tvznt9OQ5zH5Gpm6HDZdI2jlzazRGE0bNI69HEImGHCUirEukeB9QppKVuy2zeo3Yiy1Q=
   on:
+    repo: plasmashadow/chakravyuga
     branch: master
