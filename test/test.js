@@ -20,4 +20,19 @@ describe('Endpoint Test Suite', function(){
 			assert.ok(true);
 		});
 	});
+});
+
+describe('Task Test Suite', function(){
+	it('should add work properly', function(){
+		var task = new chakra.Task("type");
+		var diff = $.Deferred();
+		task.OnStart(function(data){
+			console.log(data);
+			diff.resolve(data);
+		});
+		task.do({'a':3});
+		diff.done(function(data){
+			assert.ok(data.a == 3);
+		});
+	});
 })
