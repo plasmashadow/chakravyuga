@@ -34,27 +34,54 @@ describe('Endpoint work', function() {
 
 
 describe('Router Work', function(){
-  var ep = new chakra.EndPoint("type", {
-    language: "tamil"
-  }, {
-    id: "code_black"
-  });
 
-  var ep1 = new chakra.EndPoint("type", {
-    language: "tamil"
-  }, {
-    id: "code_black"
-  });
+  it('should wait till', function(done){
+    var ep = new chakra.EndPoint("type", {
+      language: "tamil"
+    }, {
+      id: "code_black"
+    });
+    ep.on('work', function(data){})
 
-  var ep2 = new chakra.EndPoint("type", {
-    language: "tamil"
-  }, {
-    id: "code_black"
-  });
-  var router = new chakra.Router()
+    var ep1 = new chakra.EndPoint("type", {
+      language: "tamil"
+    }, {
+      id: "code_black"
+    });
+    ep1.on('work', function(data){})
 
-  router.registerType('type');
-  router.register('type',ep);
+    var ep2 = new chakra.EndPoint("type", {
+      language: "tamil"
+    }, {
+      id: "code_black"
+    });
+    ep2.on('work', function(data){})
+    var router = new chakra.Router()
 
-  console.log(router.select('type'))
+    router.registerType('type');
+    router.register('type',ep);
+    router.register('type',ep1);
+    router.register('type', ep2);
+
+    end = router.select('type')
+    console.log(end);
+    end.work("this one");
+    console.log(end.activity)
+    setTimeout(function(){
+      end = router.select('type')
+      console.log(end);
+      end.work("this one");
+      console.log(end.activity)
+
+    }, 1000)
+
+    setTimeout(function(){
+      end = router.select('type')
+      console.log(end);
+      end.work("this one");
+      console.log(end.activity)
+      done();
+    }, 1500);
+  })
+
 })
