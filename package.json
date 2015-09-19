@@ -20,6 +20,7 @@
     "mocha": "^2.2.5"
   },
   "dependencies": {
+    "array-intersection": "^0.1.2",
     "jquery-deferred": "^0.3.0",
     "node-uuid": "^1.4.3",
     "underscore": "^1.8.3"

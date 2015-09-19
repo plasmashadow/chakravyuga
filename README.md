@@ -27,28 +27,21 @@ Endpoints are the point where the task gets proccessed.
 ```javascript
    var chakra = require('chakravyga');
    var Endpoint = chakra.Endpoint;
+   // Each endpoints have
+   // type = "major classification on an endpoint"
+   // skills = "skills assosiated with the endpoint"
+   // data = "data assosiated with the endpoint"
 
-   var end = new Endpoint("type");
-
-   end.AddTask({data: {process: true}}, true);  
-   //true if you want the task to be proccessed automatically when it is
-   //added.
-
-   /*
-     Takes a callback method for executing the task.
-   */
-   end.onExecute(function(task_data){
-     doSomething(task_data);
-   });
-   /*
-     A callback which takes batch_of ended task.
-   */
-   end.onEnd(function(end_batch){
-     doSomething(end_batch);
+   var sathya = new Endpoint('scifi', ["tamil", "chennai"], {
+     id: "AZ0123TYQ",
+     usename: 'mugiwara'
    });
 
-   //make the endpoint to work.
-   end.work();
+   sathya.once('work', function(data, done){
+       //where the data be task data.
+       console.log(data);
+       done();
+   });
 
 ```
 
@@ -62,20 +55,54 @@ and selects the tasks based on enpoint availability.
    var chakra = require('chakravyga');
    var Router = chakra.Router;
    var router = new Router();
+   var Endpoint = chakra.Endpoint;
+   // Each endpoints have
+   // type = "major classification on an endpoint"
+   // skills = "skills assosiated with the endpoint"
+   // data = "data assosiated with the endpoint"
 
-   //Inorder to register a endpoint with the router.
-   var end_p = router.register('type', {data:1,out:2})
-
-   //adding task to a the Endpoint
-   end_p.addTask({obj:1,data:3}, function(task){
-     console.log(task);
-   }, function(tasks){
-     console.log(tasks);
+   var sathya = new Endpoint('scifi', ["tamil", "chennai"], {
+     id: "AZ0123TYQ",
+     usename: 'shanks'
    });
 
-   //Inorder to get a endpoint from the router
+   sathya.once('work', function(data, done){
+       //where the data be task data.
+       console.log(data);
+       done();
+   });
 
-   var end_select = router.select("type").get();
+   var adhi = new Endpoint('scifi', ["tamil", "chennai"], {
+     id: "AZ0123TYP",
+     usename: 'ace'
+   });
+
+   adhi.once('work', function(data, done){
+       //where the data be task data.
+       console.log(data);
+       done();
+   });
+
+   var magesh = new Endpoint('scifi', ["tamil", "chennai"], {
+     id: "AZ0123TYR",
+     usename: 'benn beckman'
+   });
+
+   magesh.once('work', function(data, done){
+       //where the data be task data.
+       console.log(data);
+       done();
+   });
+
+   router.registerType('strawhatspirates');
+   router.register('strawhatspirates', sathya);
+   router.register('strawhatspirates', magesh);
+
+   router.registerType('whitebeardpirates');
+   router.register('whitebeardpirates', adhi);
+
+   var end = router.select('strawhatspirates', ['tamil']);
+   end.work(new Message());
 
 ```
 
